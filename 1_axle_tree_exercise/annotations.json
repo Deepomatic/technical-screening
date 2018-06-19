@@ -1,0 +1,491 @@
+{
+  "tags": [
+    "single_axle",
+    "grouped_axles",
+    "car",
+    "other"
+  ],
+  "images": [
+    {
+      "annotated_regions": [
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.6413427734375,
+            "ymin": 0.6965780079588015,
+            "xmax": 0.688720703125,
+            "ymax": 0.8477147705992509
+          }
+        },
+        {
+          "tags": [
+            "car"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.161240234375,
+            "ymin": 0.6462356624531835,
+            "xmax": 0.238310546875,
+            "ymax": 0.721361481741573
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.3599468994140625,
+            "ymin": 0.6887298469686329,
+            "xmax": 0.4178986358642578,
+            "ymax": 0.815910196482912
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.3394189453125,
+            "ymin": 0.6878072331460674,
+            "xmax": 0.3684814453125,
+            "ymax": 0.8056384597378277
+          }
+        },
+        {
+          "tags": [
+            "other"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.210302734375,
+            "ymin": 0.3345037453183521,
+            "xmax": 0.7,
+            "ymax": 0.8810495669475655
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.4545947265625,
+            "ymin": 0.6849762991573034,
+            "xmax": 0.5063427734375,
+            "ymax": 0.8378686797752809
+          }
+        },
+        {
+          "tags": [
+            "car"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.702763671875,
+            "ymin": 0.6530386821161048,
+            "xmax": 0.915439453125,
+            "ymax": 0.8549274344569289
+          }
+        },
+        {
+          "tags": [
+            "car"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.0711767578125,
+            "ymin": 0.6359652972846442,
+            "xmax": 0.153955078125,
+            "ymax": 0.7299128043071161
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.2260498046875,
+            "ymin": 0.6758178253745318,
+            "xmax": 0.24232421875,
+            "ymax": 0.7654494382022472
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.2345361328125,
+            "ymin": 0.6822112008426966,
+            "xmax": 0.284169921875,
+            "ymax": 0.7772486540262172
+          }
+        }
+      ],
+      "location": "images/pic1.jpg"
+    },
+    {
+      "annotated_regions": [
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.6227185837765957,
+            "ymin": 0.7310913618995634,
+            "xmax": 0.7094788896276596,
+            "ymax": 0.9294060453056768
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.27237782579787234,
+            "ymin": 0.7125665256550219,
+            "xmax": 0.3161527593085106,
+            "ymax": 0.8331485398471615
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.25641206781914894,
+            "ymin": 0.7054704557860262,
+            "xmax": 0.2755568484042553,
+            "ymax": 0.8265897925764192
+          }
+        },
+        {
+          "tags": [
+            "other"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.24529587765957447,
+            "ymin": 0.18934224890829696,
+            "xmax": 0.896201795212766,
+            "ymax": 0.9618842112445415
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.36943151595744683,
+            "ymin": 0.7122680131004366,
+            "xmax": 0.4114195478723404,
+            "ymax": 0.8661640283842795
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.41147772606382976,
+            "ymin": 0.7121741948689956,
+            "xmax": 0.4586186835106383,
+            "ymax": 0.8872048990174672
+          }
+        }
+      ],
+      "location": "images/pic3.jpg"
+    },
+    {
+      "annotated_regions": [
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.8585221354166667,
+            "ymin": 0.64853515625,
+            "xmax": 0.93064453125,
+            "ymax": 0.7962890625
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.08646484375,
+            "ymin": 0.629599609375,
+            "xmax": 0.15250651041666666,
+            "ymax": 0.79267578125
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.4926171875,
+            "ymin": 0.68728515625,
+            "xmax": 0.56833984375,
+            "ymax": 0.85625
+          }
+        },
+        {
+          "tags": [
+            "other"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.46338541666666666,
+            "ymin": 0.298798828125,
+            "xmax": 0.9489908854166667,
+            "ymax": 0.8225
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.66431640625,
+            "ymin": 0.6483203125,
+            "xmax": 0.7491796875,
+            "ymax": 0.838076171875
+          }
+        },
+        {
+          "tags": [
+            "other"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.0,
+            "ymin": 0.1882421875,
+            "xmax": 0.6409114583333333,
+            "ymax": 0.878271484375
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.04869791666666667,
+            "ymin": 0.623798828125,
+            "xmax": 0.08889973958333333,
+            "ymax": 0.77896484375
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.26173828125,
+            "ymin": 0.659189453125,
+            "xmax": 0.34693359375,
+            "ymax": 0.884873046875
+          }
+        }
+      ],
+      "location": "images/pic4.jpg"
+    },
+    {
+      "annotated_regions": [
+        {
+          "tags": [
+            "other"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.11187274639423077,
+            "ymin": 0.11043219610091744,
+            "xmax": 0.8657289162660257,
+            "ymax": 0.8744086869266054
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.4120279947916667,
+            "ymin": 0.6321674311926605,
+            "xmax": 0.4821151342147436,
+            "ymax": 0.8345846473623854
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.22588641826923078,
+            "ymin": 0.6347925028669725,
+            "xmax": 0.295741937099359,
+            "ymax": 0.8225523222477065
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.5003630809294872,
+            "ymin": 0.6460901662844036,
+            "xmax": 0.5682091346153846,
+            "ymax": 0.8328107081422018
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.750663561698718,
+            "ymin": 0.6505787700688074,
+            "xmax": 0.8283941806891025,
+            "ymax": 0.8351222047018348
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.17145557892628205,
+            "ymin": 0.6345685206422018,
+            "xmax": 0.19878680889423078,
+            "ymax": 0.809982439793578
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.1966834435096154,
+            "ymin": 0.631782181766055,
+            "xmax": 0.22890374599358973,
+            "ymax": 0.8193717746559633
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.3703049879807692,
+            "ymin": 0.6370323251146789,
+            "xmax": 0.41247871594551283,
+            "ymax": 0.8319416571100917
+          }
+        }
+      ],
+      "location": "images/pic5.jpg"
+    },
+    {
+      "annotated_regions": [
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.749654296875,
+            "ymin": 0.690209056712963,
+            "xmax": 0.77337890625,
+            "ymax": 0.7941189236111111
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.584830078125,
+            "ymin": 0.7250253182870371,
+            "xmax": 0.62039453125,
+            "ymax": 0.8725622106481481
+          }
+        },
+        {
+          "tags": [
+            "other"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.1606328125,
+            "ymin": 0.25124421296296295,
+            "xmax": 0.815046875,
+            "ymax": 0.9287326388888889
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.3705625,
+            "ymin": 0.7609664351851851,
+            "xmax": 0.428640625,
+            "ymax": 0.9526331018518519
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.5359375,
+            "ymin": 0.7301576967592592,
+            "xmax": 0.585828125,
+            "ymax": 0.885474537037037
+          }
+        },
+        {
+          "tags": [
+            "single_axle"
+          ],
+          "region_type": "Box",
+          "region": {
+            "xmin": 0.772177734375,
+            "ymin": 0.6835611979166667,
+            "xmax": 0.7890703125,
+            "ymax": 0.7924117476851852
+          }
+        }
+      ],
+      "location": "images/pic2.jpg"
+    }
+  ]
+}
