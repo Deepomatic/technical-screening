@@ -16,4 +16,4 @@ into a larger area in which the given axle trees are close enough. Below is an e
 
 To do so, you first need to decide on a criteria that you will use to merge axle trees, and then fill in the `merge_axle_trees` 
 function in the `merge_axle_trees.py` script to implement your solution. The script takes the `annotations.json` file as input and outputs a new JSON file with the right format but with merged axle tree boxes.
-The output JSON should only contain 3 tags: `car`, `other`, and `axle_tree_area`.
+The output JSON should contain only 4 tags: `car`, `other`, `single_axle`, and `grouped_axles`.

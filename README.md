@@ -1,7 +1,7 @@
 # Solution Architect Challenge
 
 **IMPORTANT**: Before starting this challenge, make sure we have a position by sending your
-resume and cover letter to founders@deepomatic.com.
+resume and a motivated email to hiring@deepomatic.com.
 
 Please use [this link](https://github.com/Deepomatic/technical-screening/archive/master.zip) to download the source code and do not fork the repository. Please also read all the instructions carefully.
 
