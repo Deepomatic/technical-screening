@@ -2,7 +2,7 @@
 import json
 
 
-# -------------------------------------------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
 
 
 def open_json_from_file(json_path):
@@ -51,13 +51,13 @@ def pretty_print(inline_json):
     return
 
 
-# -------------------------------------------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
 
 
 def evaluate_images(annotations, predictions, threshold, Jaccard_min=0.5):
     """
-    Take a list of annotations and predictions, a threshold, and returns the number of true positives, false positives,
-    and false negatives.
+    Take a list of annotations and predictions, a threshold, and returns
+    the number of true positives, false positives, and false negatives.
 
     :param annotations: the json containing the annotations
     :param predictions: the json containing the predictions
@@ -75,6 +75,38 @@ def evaluate_images(annotations, predictions, threshold, Jaccard_min=0.5):
     # cf https://shapely.readthedocs.io/en/latest/manual.html#geometric-objects
 
     return true_positives, false_negatives, false_positives
+
+
+# --------------------------------------------------------------------------- #
+
+
+def evaluate_pr(annotations, predictions, N=10, Jaccard_min=0.5):
+    """
+    Take a list of annotations and predictions, the number of tresholds
+    to test, and returns the precision and recall at each threshold. In
+    the following form:
+
+    [{
+        "precision": 0.2,
+        "recall": 0.9,
+        "threshold": 0.1
+    }, {
+        "precision": 0.3,
+        "recall": 0.8,
+        "threshold": 0.2
+    }, ...]
+
+    :param annotations: the json containing the annotations
+    :param predictions: the json containing the predictions
+    :param N: the numbers of thresholds to test
+    :param Jaccard_min: the IoU threshold used to evaluate
+    :return: the list of computed metrics
+    """
+    result_list = []
+
+    # TODO: implement !
+
+    return result_list
 
 
 if __name__ == '__main__':

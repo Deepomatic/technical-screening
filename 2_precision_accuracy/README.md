@@ -38,7 +38,7 @@ The ground truth boxes are in the following format:
 ```
 
 
-### Predictions 
+### Predictions
 
 Each predicted box is in the following format:
 ```
@@ -67,11 +67,11 @@ Each predicted box is in the following format:
 
 Notice that there is now a confidence score between 0 and 1.
 
-## Goal
+## Task 1
 
-Your task is to implement a function that takes an image, then compares the ground truth to the
-predictions above a given score threshold, and returns :
-- the number of true positives 
+Your first task is to implement a function that takes an image, then compares the ground truth to the
+predictions above a given score threshold, and returns:
+- the number of true positives
 - the number of false positives
 - the number of false negatives
 
@@ -79,11 +79,11 @@ The function is called `evaluate_image` and you just need to write its body. Her
 
 ### definition: IoU
 
-The **IoU** (intersection over union) `IoU(B1, B2)` of two boxes is defined as the surface of the intersection of the two boxes divided by the surface of the union of the two boxes. 
+The **IoU** (intersection over union) `IoU(B1, B2)` of two boxes is defined as the surface of the intersection of the two boxes divided by the surface of the union of the two boxes.
 
 ### definition: True positive
 
-A predicted box P is a **true positive** if there is a ground truth box G such that IoU(P,G) >= 0.5, such that G is not already associated with another predicted box. 
+A predicted box P is a **true positive** if there is a ground truth box G such that IoU(P,G) >= 0.5, such that G is not already associated with another predicted box.
 
 If two predicted boxes satisfy the IoU criterion, only the one with the highest score will be associated with the ground truth box.
 
@@ -94,3 +94,26 @@ A false negative is a ground truth box that is not associated with any predicted
 ### definition: False positive
 
 A predicted box P is a **false positive** if it is not associated with any ground truth box.
+
+
+## Task 2
+
+Your second task is to compute the Precision and Recall metrics. The definition of precision and recall can be found on [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall).
+
+**Remark**: the precision and recall are defined for a certain score treshold (cf. Task 1).
+
+Your task is to compute these two metrics at a certain threshold granularity. The function is called `evaluate_dataset` and you just need to write its body.
+
+Example of function call:
+```
+evaluate_pr(annotations, predictions, N=10, Jaccard_min=0.5)
+```
+
+This will return the precision / recall for the list of thresholds `[0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]`, in the following form:
+
+```
+[{"precision": 0.2, "recall": 0.9, "threshold": 0.1}, {"precision": 0.3, "recall": 0.8, "threshold": 0.2}, ...]
+```
+
+For this task, you will be judged both on the correction of the function, but also in the time complexity of the algorithm you used (if you want, you can provide two implementations, one naive called `evaluate_pr_naive` and a more efficient one `evaluate_pr`).
+
