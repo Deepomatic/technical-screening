@@ -54,7 +54,7 @@ def pretty_print(inline_json):
 # --------------------------------------------------------------------------- #
 
 
-def evaluate_images(annotations, predictions, threshold, Jaccard_min=0.5):
+def evaluate_image(annotations, predictions, threshold, Jaccard_min=0.5):
     """
     Take a list of annotations and predictions, a threshold, and returns
     the number of true positives, false positives, and false negatives.
