@@ -98,15 +98,15 @@ A predicted box P is a **false positive** if it is not associated with any groun
 
 ## Task 2
 
-Your second task is to compute the Precision and Recall metrics. The definition of precision and recall can be found on [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall).
+Your second task is to compute the Precision and Recall metrics. The definition of precision and recall can be found on [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall). It is defined on the __whole dataset__ (and not at the image level).
 
 **Remark**: the precision and recall are defined for a certain score treshold (cf. Task 1).
 
-Your task is to compute these two metrics at a certain threshold granularity. The function is called `evaluate_dataset` and you just need to write its body.
+Your task is to compute these two metrics for all thresholds in the `[0.0; 1.0]` range, with a certain granularity. The function is called `evaluate_pr` and you just need to write its body. It takes as arguments the whole groundtruth (as defined in `groundtruth.json`) and the whole set of predictions (as defined in `predictions.json`), and compute the prediction and recall on the __whole dataset__.
 
 Example of function call:
 ```
-evaluate_pr(annotations, predictions, N=10, Jaccard_min=0.5)
+evaluate_pr(groundtruth, predictions, N=10, Jaccard_min=0.5)
 ```
 
 This will return the precision / recall for the list of thresholds `[0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]`, in the following form:
