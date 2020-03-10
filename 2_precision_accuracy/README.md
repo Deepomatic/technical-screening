@@ -1,4 +1,4 @@
-# Performance Evaluation Exerise
+# Performance Evaluation Exercise
 
 We now train a plane detector on satellite images.
 
