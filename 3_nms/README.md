@@ -69,7 +69,7 @@ Notice that there is now a confidence score between 0 and 1.
 
 ## Task 1
 
-After doing some research on how the NMS algorithm works, your first task is to implement a NMS function that takes a list of proposal predictions as an entry and returns a list of final predictions. For this task, you will set the threshold IoU to 0.5.
+After doing some research on how the NMS algorithm works, your first task is to implement a NMS function that takes a list of proposal predictions as an entry and returns a list of final predictions. For this task, you will set the threshold IoU to 0.3.
 
 The function is called `nms` and you just need to write its body. Here are some relavant definition of the metrics you will use.
 
@@ -81,7 +81,7 @@ The **IoU** (intersection over union) `IoU(B1, B2)` of two boxes is defined as t
 
 ## Task 2
 
-For the previous task we asked the threshold IoU to be set to 0.5 but this value can be adjusted depending on the type of datasets and tasks you are encountering. For this dataset, which threshold IoU would you recommend ? 
+For the previous task we asked the threshold IoU to be set to 0.3 but this value can be adjusted depending on the type of datasets and tasks you are encountering. For this dataset, which threshold IoU would you recommend ? 
 
 **Hint:** Computing the accuracy and recall depending on the threshold IoU should help you find the best IoU value.
 
