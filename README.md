@@ -11,6 +11,9 @@ The purpose of this simple exercise is to do some basic bounding box manipulatio
 ## Exercise 2: Precision Accuracy 
 This time you are given both the model prediction and the ground truth for the images and you need to build a module that evaluates the performance of the network. Same thing, just go to `2_precision_accuracy/README.md`.
 
+## Exercise 3: Non-Maximum Precision (NMS)
+This time you are given the model proposals and you need to build the NMS algorithm to filter out the predictions. Same thing, just go to `3_nms/README.md`.
+
 ## Submission
 
 Once you are happy with the results, please zip this folder and provide us with any information needed to run your code.
