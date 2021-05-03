@@ -51,47 +51,6 @@ def pretty_print(inline_json):
     print(json.dumps(inline_json, indent=4, sort_keys=True))
     return
 
-
-# --------------------------------------------------------------------------- #
-def random_number(coordinates, sliding_window):
-    return random.uniform(max(coordinates-sliding_window, 0), min(coordinates+sliding_window, 1))
-
-def create_proposals_dataset(annotations, N=15, threshold=0.03):
-    proposals = {'images': []}
-
-    for img in annotations['images']:
-        img_proposals = {
-            'location': img['location'],
-            'annotated_regions': []
-        }
-        for box in img['annotated_regions']:
-            amount_of_proposals = random.randint(0, N)
-            box_width = box['region']['xmax'] - box['region']['xmin']
-            box_heigth = box['region']['ymax'] - box['region']['ymin']
-            # Create a random number of proposals 
-            for i in range(amount_of_proposals):
-                xmin = random_number(box['region']['xmin'], threshold)
-                ymin = random_number(box['region']['ymin'], threshold)
-                width = random_number(box_width, box_width*threshold)
-                height = random_number(box_heigth, box_heigth*threshold)
-                proposal = {
-                    "tags": [
-                        "avion"
-                    ],
-                    "region_type": "Box",
-                    "region": {
-                        "xmin": max(xmin, 0),
-                        "xmax": min(xmin+width, 1),
-                        "ymin": max(ymin, 0),
-                        "ymax": min(ymin+height, 1)
-                    },
-                    "score": random.uniform(0, 1)
-                }
-                img_proposals['annotated_regions'].append(proposal)
-
-        proposals['images'].append(img_proposals)
-    return proposals
-
 # --------------------------------------------------------------------------- #
 def nms(proposals, IoU_treshold=0.5):
     """
@@ -112,12 +71,9 @@ def nms(proposals, IoU_treshold=0.5):
 if __name__ == '__main__':
     # Load annotations from json file
     groundtruth = open_json_from_file('groundtruth.json')
-    # proposals = open_json_from_file('proposals.json')
+    proposals = open_json_from_file('proposals.json')
 
-    proposals = create_proposals_dataset(groundtruth)
-    save_json_to_file(proposals, 'proposals.json')
-
-    # # Evaluate
-    # for img in proposals['images']:
-    #     # TODO: Do some stuff and evaluate image
-    #     print(f"Image '{img['location']}'\n\t- TP: \n\t- FN: \n\t- FP: ")
+    # NMS
+    for img in proposals['images']:
+        # TODO: Do some stuff and compute predictions
+        print(f"Image '{img['location']}'\n\t- TP: \n\t- FN: \n\t- FP: ")
