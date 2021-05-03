@@ -4,7 +4,7 @@ We now train a plane detector on satellite images.
 
 **Example:**
 
-![alt text](https://storage.googleapis.com/dp-missions/hiring-sa/plane.png "Single axle trees")
+![alt text](https://storage.googleapis.com/dp-missions/hiring-sa/plane.png "Plane")
 
 You have access to:
 - all the images in the `images` directory
@@ -115,5 +115,5 @@ This will return the precision / recall for the list of thresholds `[0.0, 0.1, 0
 [{"precision": 0.2, "recall": 0.9, "threshold": 0.1}, {"precision": 0.3, "recall": 0.8, "threshold": 0.2}, ...]
 ```
 
-For this task, you will be judged both on the correctness of the function, but also in the time complexity of the algorithm you used (if you want, you can provide two implementations, one naive called `evaluate_pr_naive` and a more efficient one `evaluate_pr`).
+For this task, you will be judged both on the correctness of the function, but also in the **time complexity of the algorithm** you used. If you want, you can provide two implementations, one naive called `evaluate_pr_naive` and a more efficient one `evaluate_pr`.
 
