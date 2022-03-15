@@ -1,6 +1,6 @@
 # #!/usr/bin/env python3
 import json
-
+import time
 
 # --------------------------------------------------------------------------- #
 
@@ -79,9 +79,39 @@ def evaluate_image(annotations, predictions, threshold, Jaccard_min=0.5):
 
 # --------------------------------------------------------------------------- #
 
+def evaluate_pr_naive(annotations, predictions, N=10, Jaccard_min=0.5):
+    """
+    Take a list of annotations and predictions, the number of tresholds
+    to test, and returns the precision and recall at each threshold. In
+    the following form:
+
+    [{
+        "precision": 0.2,
+        "recall": 0.9,
+        "threshold": 0.1
+    }, {
+        "precision": 0.3,
+        "recall": 0.8,
+        "threshold": 0.2
+    }, ...]
+
+    :param annotations: the json containing the annotations
+    :param predictions: the json containing the predictions
+    :param N: the numbers of thresholds to test
+    :param Jaccard_min: the IoU threshold used to evaluate
+    :return: the list of computed metrics
+    """
+    result_list = []
+
+    # TODO: implement !
+
+    return result_list
+
+
 
 def evaluate_pr(annotations, predictions, N=10, Jaccard_min=0.5):
     """
+    Optimized version: minimize the amount of computation.
     Take a list of annotations and predictions, the number of tresholds
     to test, and returns the precision and recall at each threshold. In
     the following form:
@@ -118,3 +148,14 @@ if __name__ == '__main__':
     for img in groundtruth['images']:
         # TODO: Do some stuff and evaluate image
         print(f"Image '{img['location']}'\n\t- TP: \n\t- FN: \n\t- FP: ")
+
+    # Compare evaluate_pr_naive and evaluate_pr
+    T0 = time.time()
+    evaluate_pr_naive(groundtruth, predictions, N=10, Jaccard_min=0.5)
+    T1 = time.time()
+    evaluate_pr(groundtruth, predictions, N=10, Jaccard_min=0.5)
+    T2 = time.time()
+    print(f"Naive version computed in {round(T1-T0, 2)}s")
+    print(f"Optimized version computed in {round(T2-T1, 2)}s")
+
+

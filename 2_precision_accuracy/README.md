@@ -102,7 +102,7 @@ Your second task is to compute the Precision and Recall metrics. The definition 
 
 **Remark**: the precision and recall are defined for a certain score treshold (cf. Task 1).
 
-Your task is to compute these two metrics for all thresholds in the `[0.0; 1.0]` range, with a certain granularity. The function is called `evaluate_pr` and you just need to write its body. It takes as arguments the whole groundtruth (as defined in `groundtruth.json`) and the whole set of predictions (as defined in `predictions.json`), and compute the prediction and recall on the __whole dataset__.
+Your task is to compute these two metrics for all thresholds in the `[0.0; 1.0]` range, with a certain granularity. The function is called `evaluate_pr_naive` and you just need to write its body. It takes as arguments the whole groundtruth (as defined in `groundtruth.json`) and the whole set of predictions (as defined in `predictions.json`), and compute the prediction and recall on the __whole dataset__.
 
 Example of function call:
 ```
@@ -115,5 +115,8 @@ This will return the precision / recall for the list of thresholds `[0.0, 0.1, 0
 [{"precision": 0.2, "recall": 0.9, "threshold": 0.1}, {"precision": 0.3, "recall": 0.8, "threshold": 0.2}, ...]
 ```
 
-For this task, you will be judged both on the correctness of the function, but also in the time complexity of the algorithm you used (if you want, you can provide two implementations, one naive called `evaluate_pr_naive` and a more efficient one `evaluate_pr`).
+For this task, you will be judged on the correctness of the functions, but also the elegance of your code.
 
+## Task 3 
+
+Finally we would like you to submit an optimized implementation of your function: the goal is not to use faster library but rather to work on your solution to reduce the amount of unnecessary computation. Your function should be coded in the method `evaluate_pr`. We use the `time` library to compare the efficiency between each implementation. 
