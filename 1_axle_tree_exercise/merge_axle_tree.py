@@ -15,8 +15,8 @@ def open_json_from_file(json_path):
     try:
         with open(json_path) as json_file:
             json_data = json.load(json_file)
-    except:
-        print(f"Could not open file {json_path} in json format.")
+    except Exception as e:
+        print(f"Could not open file {json_path} in json format. {e}")
         raise
 
     return json_data
@@ -33,8 +33,8 @@ def save_json_to_file(json_data, json_path):
     try:
         with open(json_path, 'w') as json_file:
             json.dump(json_data, json_file)
-    except:
-        print(f"Could not save file {json_path} in json format.")
+    except Exception as e:
+        print(f"Could not save file {json_path} in json format. {e}")
         raise
 
     return
