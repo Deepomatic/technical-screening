@@ -31,7 +31,7 @@ def save_json_to_file(json_data, json_path):
     :return:
     """
     try:
-        with open(json_path, 'w') as json_file:
+        with open(json_path, "w") as json_file:
             json.dump(json_data, json_file)
     except:
         print(f"Could not save file {json_path} in json format.")
@@ -79,6 +79,7 @@ def evaluate_image(annotations, predictions, threshold, jaccard_min=0.5):
 
 # --------------------------------------------------------------------------- #
 
+
 def evaluate_pr_naive(annotations, predictions, n=10, jaccard_min=0.5):
     """
     Take a list of annotations and predictions, the number of tresholds
@@ -106,7 +107,6 @@ def evaluate_pr_naive(annotations, predictions, n=10, jaccard_min=0.5):
     # TODO: implement !
 
     return result_list
-
 
 
 def evaluate_pr(annotations, predictions, n=10, jaccard_min=0.5):
@@ -139,13 +139,13 @@ def evaluate_pr(annotations, predictions, n=10, jaccard_min=0.5):
     return result_list
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Load annotations from json file
-    groundtruth = open_json_from_file('groundtruth.json')
-    predictions = open_json_from_file('predictions.json')
+    groundtruth = open_json_from_file("groundtruth.json")
+    predictions = open_json_from_file("predictions.json")
 
     # Evaluate
-    for img in groundtruth['images']:
+    for img in groundtruth["images"]:
         # TODO: Do some stuff and evaluate image
         print(f"Image '{img['location']}'\n\t- TP: \n\t- FN: \n\t- FP: ")
 
@@ -157,5 +157,3 @@ if __name__ == '__main__':
     T2 = time.time()
     print(f"Naive version computed in {round(T1-T0, 2)}s")
     print(f"Optimized version computed in {round(T2-T1, 2)}s")
-
-
