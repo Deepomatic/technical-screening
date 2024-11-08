@@ -54,7 +54,7 @@ def pretty_print(inline_json):
 # --------------------------------------------------------------------------- #
 
 
-def evaluate_image(annotations, predictions, threshold, Jaccard_min=0.5):
+def evaluate_image(annotations, predictions, threshold, jaccard_min=0.5):
     """
     Take a list of annotations and predictions, a threshold, and returns
     the number of true positives, false positives, and false negatives.
@@ -62,7 +62,7 @@ def evaluate_image(annotations, predictions, threshold, Jaccard_min=0.5):
     :param annotations: the json containing the annotations
     :param predictions: the json containing the predictions
     :param threshold: the threshold used to select the boxes to evaluate
-    :param Jaccard_min: the IoU threshold used to evaluate
+    :param jaccard_min: the IoU threshold used to evaluate
     :return: (true_positives, false_negatives, false_positives)
     """
     true_positives = 0
@@ -79,7 +79,7 @@ def evaluate_image(annotations, predictions, threshold, Jaccard_min=0.5):
 
 # --------------------------------------------------------------------------- #
 
-def evaluate_pr_naive(annotations, predictions, N=10, Jaccard_min=0.5):
+def evaluate_pr_naive(annotations, predictions, n=10, jaccard_min=0.5):
     """
     Take a list of annotations and predictions, the number of tresholds
     to test, and returns the precision and recall at each threshold. In
@@ -97,8 +97,8 @@ def evaluate_pr_naive(annotations, predictions, N=10, Jaccard_min=0.5):
 
     :param annotations: the json containing the annotations
     :param predictions: the json containing the predictions
-    :param N: the numbers of thresholds to test
-    :param Jaccard_min: the IoU threshold used to evaluate
+    :param n: the numbers of thresholds to test
+    :param jaccard_min: the IoU threshold used to evaluate
     :return: the list of computed metrics
     """
     result_list = []
@@ -109,7 +109,7 @@ def evaluate_pr_naive(annotations, predictions, N=10, Jaccard_min=0.5):
 
 
 
-def evaluate_pr(annotations, predictions, N=10, Jaccard_min=0.5):
+def evaluate_pr(annotations, predictions, n=10, jaccard_min=0.5):
     """
     Optimized version: minimize the amount of computation.
     Take a list of annotations and predictions, the number of tresholds
@@ -128,8 +128,8 @@ def evaluate_pr(annotations, predictions, N=10, Jaccard_min=0.5):
 
     :param annotations: the json containing the annotations
     :param predictions: the json containing the predictions
-    :param N: the numbers of thresholds to test
-    :param Jaccard_min: the IoU threshold used to evaluate
+    :param n: the numbers of thresholds to test
+    :param jaccard_min: the IoU threshold used to evaluate
     :return: the list of computed metrics
     """
     result_list = []
@@ -151,9 +151,9 @@ if __name__ == '__main__':
 
     # Compare evaluate_pr_naive and evaluate_pr
     T0 = time.time()
-    evaluate_pr_naive(groundtruth, predictions, N=10, Jaccard_min=0.5)
+    evaluate_pr_naive(groundtruth, predictions, n=10, jaccard_min=0.5)
     T1 = time.time()
-    evaluate_pr(groundtruth, predictions, N=10, Jaccard_min=0.5)
+    evaluate_pr(groundtruth, predictions, n=10, jaccard_min=0.5)
     T2 = time.time()
     print(f"Naive version computed in {round(T1-T0, 2)}s")
     print(f"Optimized version computed in {round(T2-T1, 2)}s")
