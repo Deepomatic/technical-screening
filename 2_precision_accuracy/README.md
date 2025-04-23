@@ -85,7 +85,7 @@ The **IoU** (intersection over union) `IoU(B1, B2)` of two boxes is defined as t
 
 A predicted box P is a **true positive** if there is a ground truth box G such that IoU(P,G) >= 0.5, such that G is not already associated with another predicted box.
 
-If two predicted boxes satisfy the IoU criterion, only the one with the highest score will be associated with the ground truth box.
+If two predicted boxes satisfy the IoU criterion, only the one with the highest confidence score will be associated with the ground truth box.
 
 ### definition: False negative
 
